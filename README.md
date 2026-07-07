@@ -39,7 +39,7 @@ gradients, groups, transforms, filters, or clipping yet.
 This project uses [`uv`](https://docs.astral.sh/uv/) for dependency management.
 
 ```bash
-git clone https://github.com/MirS0bhan/Inklang inklang && cd inklang
+git clone https://github.com/MirS0bhan/Inklang && cd inklang
 uv sync         
 ```
 
