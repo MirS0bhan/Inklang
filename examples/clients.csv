@@ -1,0 +1,5 @@
+name,title,company,phone,email,accent
+Ada Lovelace,Founder & CEO,Analytical Engines Ltd,+1 555 0100,ada@example.com,#7b2ff7
+Grace Hopper,CTO,COBOL Systems,+1 555 0101,grace@example.com,#0ea5e9
+Linus Torvalds,Principal Engineer,Kernel Labs,+1 555 0102,linus@example.com,#16a34a
+Margaret Hamilton,Director,Onboard Software Inc.,+1 555 0103,margaret@example.com,#db2777

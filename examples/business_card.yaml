@@ -1,0 +1,57 @@
+# InkLang example design — a 3.5" x 2" business card (350x200 px @ 100dpi).
+# Every mustache placeholder is filled from one row of examples/clients.csv.
+# (Note: substitution happens *before* YAML parsing, so keep placeholder
+#  braces out of comments — they'd be treated as variables too.)
+design: "{{name}} · Business Card"
+size: "350x200"
+background: "#ffffff"
+
+gradients:
+  sky: { type: linear, stops: [{offset: 0, color: "#f00"}, {offset: 100, color: "#00f"}] }
+
+elements:
+  # Full white canvas (background above already does this; here as a base layer).
+  - type: rect
+    position: [0, 0]
+    size: [350, 200]
+    fill: "#ffffff"
+
+  # Coloured top band — its colour comes from the data ({{accent}}).
+  - type: rect
+    position: [0, 0]
+    size: [350, 8]
+    fill: "ref:sky"
+
+  # Name.
+  - type: text
+    content: "{{name}}"
+    position: [24, 72]
+    color: "#1a1a1a"
+    font: { family: Helvetica, size: 26, weight: bold }
+
+  # Job title.
+  - type: text
+    content: "{{title}}"
+    position: [24, 98]
+    color: "#555555"
+    font: { family: Helvetica, size: 14 }
+
+  # Contact line.
+  - type: text
+    content: "{{phone}}   ·   {{email}}"
+    position: [24, 152]
+    color: "#888888"
+    font: { family: Helvetica, size: 11 }
+
+  # Company name in the accent colour.
+  - type: text
+    content: "{{company}}"
+    position: [24, 172]
+    color: "{{accent}}"
+    font: { family: Helvetica, size: 16, weight: bold }
+
+  # Decorative dot in the accent colour.
+  - type: circle
+    center: [312, 40]
+    radius: 14
+    fill: "{{accent}}"
