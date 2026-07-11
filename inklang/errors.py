@@ -56,3 +56,8 @@ class RenderError(InklangError):
 
 class ExportError(InklangError):
     """Inkscape is unavailable or the export command failed."""
+
+
+class ParseError(InklangError):
+    """An error occurred while parsing the design file."""
+    
